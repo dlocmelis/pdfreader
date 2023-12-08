@@ -8,11 +8,11 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/contentstream"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/internal/transform"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/contentstream"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/internal/transform"
+	"github.com/dlocmelis/pdfreader/model"
 	"golang.org/x/text/unicode/norm"
 )
 
@@ -356,8 +356,9 @@ func (to *textObject) moveText(tx, ty float64) {
 // Move to the start of the next line, offset from the start of the current line by (tx, ty). As a
 // side effect, this operator shall set the leading parameter in the text state. This operator shall
 // have the same effect as this code:
-//  −ty TL
-//  tx ty Td
+//
+//	−ty TL
+//	tx ty Td
 func (to *textObject) moveTextSetLeading(tx, ty float64) {
 	to.state.tl = -ty
 	to.moveTo(tx, ty)
@@ -365,7 +366,9 @@ func (to *textObject) moveTextSetLeading(tx, ty float64) {
 
 // nextLine "T*"" Moves start of text line to next text line
 // Move to the start of the next line. This operator has the same effect as the code
-//    0 -Tl Td
+//
+//	0 -Tl Td
+//
 // where Tl denotes the current leading parameter in the text state. The negative of Tl is used
 // here because Tl is the text leading expressed as a positive number. Going to the next line
 // entails decreasing the y coordinate. (page 250)
@@ -574,9 +577,10 @@ func (fontStack *fontStacker) peek() *model.PdfFont {
 }
 
 // get returns the `idx`'th element of the font stack if there is one or nil if there isn't.
-//  idx = 0: bottom of font stack
-//  idx = len(fontstack) - 1: top of font stack
-//  idx = -n is same as dx = len(fontstack) - n, so fontstack.get(-1) is same as fontstack.peek()
+//
+//	idx = 0: bottom of font stack
+//	idx = len(fontstack) - 1: top of font stack
+//	idx = -n is same as dx = len(fontstack) - n, so fontstack.get(-1) is same as fontstack.peek()
 func (fontStack *fontStacker) get(idx int) *model.PdfFont {
 	if idx < 0 {
 		idx += fontStack.size()
@@ -1054,19 +1058,19 @@ func rectUnion(b1, b2 model.PdfRectangle) model.PdfRectangle {
 // The following code extracts the text on PDF page `page` into `text` then finds the bounding box
 // `bbox` of substring `term` in `text`.
 //
-//     ex, _ := New(page)
-//     // handle errors
-//     pageText, _, _, err := ex.ExtractPageText()
-//     // handle errors
-//     text := pageText.Text()
-//     textMarks := pageText.Marks()
+//	ex, _ := New(page)
+//	// handle errors
+//	pageText, _, _, err := ex.ExtractPageText()
+//	// handle errors
+//	text := pageText.Text()
+//	textMarks := pageText.Marks()
 //
-//     	start := strings.Index(text, term)
-//      end := start + len(term)
-//      spanMarks, err := textMarks.RangeOffset(start, end)
-//      // handle errors
-//      bbox, ok := spanMarks.BBox()
-//      // handle errors
+//		start := strings.Index(text, term)
+//	 end := start + len(term)
+//	 spanMarks, err := textMarks.RangeOffset(start, end)
+//	 // handle errors
+//	 bbox, ok := spanMarks.BBox()
+//	 // handle errors
 type TextMark struct {
 	// Text is the extracted text. It has been decoded to Unicode via ToUnicode().
 	Text string

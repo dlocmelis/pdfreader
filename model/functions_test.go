@@ -8,8 +8,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 func init() {

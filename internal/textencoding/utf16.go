@@ -1,8 +1,8 @@
 package textencoding
 
 import (
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/internal/strutils"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/internal/strutils"
 )
 
 // UTF16Encoder represents UTF-16 encoding.

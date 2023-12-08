@@ -28,9 +28,9 @@ import (
 
 	lzw1 "golang.org/x/image/tiff/lzw"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 
-	"github.com/moolekkari/unipdf/internal/ccittfax"
+	"github.com/dlocmelis/pdfreader/internal/ccittfax"
 )
 
 // Stream encoding filter names.
@@ -1553,7 +1553,9 @@ func (enc *ASCII85Encoder) DecodeStream(streamObj *PdfObjectStream) ([]byte, err
 }
 
 // Convert a base 256 number to a series of base 85 values (5 codes).
-//  85^5 = 4437053125 > 256^4 = 4294967296
+//
+//	85^5 = 4437053125 > 256^4 = 4294967296
+//
 // So 5 base-85 numbers will always be enough to cover 4 base-256 numbers.
 // The base 256 value is already converted to an uint32 value.
 func (enc *ASCII85Encoder) base256Tobase85(base256val uint32) [5]byte {

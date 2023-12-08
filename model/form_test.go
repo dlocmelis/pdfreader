@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/internal/testutils"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/internal/testutils"
 )
 
 // Test loading of a basic checkbox field with a merged-in annotation.

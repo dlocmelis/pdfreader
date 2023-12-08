@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // Chapter is used to arrange multiple drawables (paragraphs, images, etc) into a single section.

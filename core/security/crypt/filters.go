@@ -3,7 +3,7 @@ package crypt
 import (
 	"fmt"
 
-	"github.com/moolekkari/unipdf/core/security"
+	"github.com/dlocmelis/pdfreader/core/security"
 )
 
 var (

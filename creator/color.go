@@ -5,7 +5,7 @@ import (
 
 	"math"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 // Color interface represents colors in the PDF creator.
@@ -87,7 +87,8 @@ func ColorRGBFromHex(hexStr string) Color {
 
 // ColorRGBFrom8bit creates a Color from 8bit (0-255) r,g,b values.
 // Example:
-//   red := ColorRGBFrom8Bit(255, 0, 0)
+//
+//	red := ColorRGBFrom8Bit(255, 0, 0)
 func ColorRGBFrom8bit(r, g, b byte) Color {
 	color := rgbColor{}
 	color.r = float64(r) / 255.0
@@ -98,7 +99,8 @@ func ColorRGBFrom8bit(r, g, b byte) Color {
 
 // ColorRGBFromArithmetic creates a Color from arithmetic (0-1.0) color values.
 // Example:
-//   green := ColorRGBFromArithmetic(0, 1.0, 0)
+//
+//	green := ColorRGBFromArithmetic(0, 1.0, 0)
 func ColorRGBFromArithmetic(r, g, b float64) Color {
 	// Ensure is in the range 0-1:
 	r = math.Max(math.Min(r, 1.0), 0.0)

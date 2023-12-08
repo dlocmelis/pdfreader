@@ -1,8 +1,8 @@
 package segments
 
 import (
-	"github.com/moolekkari/unipdf/internal/jbig2/bitmap"
-	"github.com/moolekkari/unipdf/internal/jbig2/errors"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/bitmap"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/errors"
 )
 
 // document is a testing structure that implements Documenter interface.

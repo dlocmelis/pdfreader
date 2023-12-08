@@ -1,7 +1,7 @@
 package extractor
 
 import (
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // Extractor stores and offers functionality for extracting content from PDF pages.

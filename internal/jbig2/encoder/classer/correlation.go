@@ -4,10 +4,10 @@ import (
 	"image"
 	"math"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/bitmap"
-	"github.com/moolekkari/unipdf/internal/jbig2/errors"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/bitmap"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/errors"
 )
 
 var debugCorrelationScore bool

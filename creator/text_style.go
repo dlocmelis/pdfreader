@@ -1,7 +1,7 @@
 package creator
 
 import (
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // TextStyle is a collection of properties that can be assigned to a chunk of text.

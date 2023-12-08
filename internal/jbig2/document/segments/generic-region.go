@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/bitmap"
-	"github.com/moolekkari/unipdf/internal/jbig2/decoder/arithmetic"
-	"github.com/moolekkari/unipdf/internal/jbig2/decoder/mmr"
-	enc "github.com/moolekkari/unipdf/internal/jbig2/encoder/arithmetic"
-	"github.com/moolekkari/unipdf/internal/jbig2/errors"
-	"github.com/moolekkari/unipdf/internal/jbig2/reader"
-	"github.com/moolekkari/unipdf/internal/jbig2/writer"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/bitmap"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/decoder/arithmetic"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/decoder/mmr"
+	enc "github.com/dlocmelis/pdfreader/internal/jbig2/encoder/arithmetic"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/errors"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/reader"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/writer"
 )
 
 // GenericRegion represents a generic region segment.

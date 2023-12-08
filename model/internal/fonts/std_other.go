@@ -6,7 +6,7 @@
 package fonts
 
 import (
-	"github.com/moolekkari/unipdf/internal/textencoding"
+	"github.com/dlocmelis/pdfreader/internal/textencoding"
 )
 
 func init() {

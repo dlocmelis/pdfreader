@@ -15,9 +15,9 @@ import (
 	"github.com/vanng822/css"
 	"golang.org/x/net/html"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/contentstream/draw"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/contentstream/draw"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 type htmlMargin struct {
@@ -168,7 +168,7 @@ func (style *htmlBlockStyle) addCSSStyle(tag, property, value string) {
 func (style *htmlBlockStyle) addEmbeddedCSS(tag string, csstext string) {
 	ss := css.ParseBlock(csstext)
 	for _, s := range ss {
-		style.addCSSStyle(tag, s.Property, s.Value)
+		style.addCSSStyle(tag, s.Property, s.Value.Text())
 	}
 }
 
@@ -346,7 +346,7 @@ func (b *htmlBlock) parseNodeStyle(node *html.Node) htmlBlockStyle {
 
 	if cssStyles, found := b.owner.cssStylessByNode[node]; found {
 		for _, cssStyle := range cssStyles {
-			style.addCSSStyle(node.Data, cssStyle.Property, cssStyle.Value)
+			style.addCSSStyle(node.Data, cssStyle.Property, cssStyle.Value.Text())
 		}
 	}
 
@@ -746,7 +746,7 @@ func (h *HTMLContent) AddCSS(cssText string) error {
 	ss := css.Parse(cssText)
 	rules := ss.GetCSSRuleList()
 	for _, r := range rules {
-		sel, err := cssSelector.Compile(r.Style.SelectorText)
+		sel, err := cssSelector.Parse(r.Style.Selector.ParsedText())
 		if err != nil {
 			return err
 		}

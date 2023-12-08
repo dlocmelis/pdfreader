@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // PdfAppender appends new PDF content to an existing PDF document via incremental updates.

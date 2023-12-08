@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 func init() {

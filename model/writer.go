@@ -14,11 +14,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/core/security"
-	"github.com/moolekkari/unipdf/core/security/crypt"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/core/security"
+	"github.com/dlocmelis/pdfreader/core/security/crypt"
 )
 
 var pdfAuthor = "Moole PDF Engine"

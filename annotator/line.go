@@ -1,10 +1,10 @@
 package annotator
 
 import (
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/contentstream/draw"
-	pdfcore "github.com/moolekkari/unipdf/core"
-	pdf "github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/contentstream/draw"
+	pdfcore "github.com/dlocmelis/pdfreader/core"
+	pdf "github.com/dlocmelis/pdfreader/model"
 )
 
 // LineAnnotationDef defines a line between point 1 (X1,Y1) and point 2 (X2,Y2).  The line ending styles can be none

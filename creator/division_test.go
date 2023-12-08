@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 var seed = rand.New(rand.NewSource(time.Now().UnixNano()))

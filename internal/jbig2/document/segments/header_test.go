@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/reader"
-	"github.com/moolekkari/unipdf/internal/jbig2/writer"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/reader"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/writer"
 )
 
 // TestDecodeHeader test the segment header model decode process.

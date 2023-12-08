@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/basic"
-	"github.com/moolekkari/unipdf/internal/jbig2/bitmap"
-	"github.com/moolekkari/unipdf/internal/jbig2/document/segments"
-	"github.com/moolekkari/unipdf/internal/jbig2/errors"
-	"github.com/moolekkari/unipdf/internal/jbig2/writer"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/basic"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/bitmap"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/document/segments"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/errors"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/writer"
 )
 
 // EncodingMethod defines the method of encoding for given page,

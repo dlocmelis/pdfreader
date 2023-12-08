@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // newCurve returns new instance of Curve between points (x1,y1) and (x2, y2) with control point (cx,cy).

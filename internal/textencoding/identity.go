@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // IdentityEncoder represents an 2-byte identity encoding

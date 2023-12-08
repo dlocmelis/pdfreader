@@ -3,9 +3,9 @@ package writer
 import (
 	"io"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/errors"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/errors"
 )
 
 // Writer is the structure used to write bits, bytes into predefined data.
@@ -35,12 +35,13 @@ func New(data []byte) *Writer {
 // While default writer writes single bits into LSB, the msbWriter writes single bits
 // starting from the MSB.
 // Example:
-// 		InverseWriter contains following data:
-//		data - 10010100 01001110 00000000
-//							 	 ^
-// 		The default current bit index is pointed by '^'.
-// 		Writing new '1' bit to the following data would result as:
-//		data - 10010100 01001110 10000000
+//
+//	InverseWriter contains following data:
+//	data - 10010100 01001110 00000000
+//						 	 ^
+//	The default current bit index is pointed by '^'.
+//	Writing new '1' bit to the following data would result as:
+//	data - 10010100 01001110 10000000
 func NewMSB(data []byte) *Writer {
 	return &Writer{data: data, msb: true}
 }

@@ -3,7 +3,7 @@ package cmap
 import (
 	"unicode/utf16"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 // hexToCharCode returns the integer that is encoded in `shex` as a big-endian hex value

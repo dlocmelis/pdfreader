@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/internal/jbig2/basic"
-	"github.com/moolekkari/unipdf/internal/jbig2/errors"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/basic"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/errors"
 )
 
 // Bitmaps is the structure that contains slice of the bitmaps and the bounding boxes.

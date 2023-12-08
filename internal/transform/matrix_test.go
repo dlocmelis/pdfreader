@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 func init() {

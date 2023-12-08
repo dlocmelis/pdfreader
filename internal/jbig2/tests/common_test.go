@@ -15,12 +15,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/contentstream"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/contentstream"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/model"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/document"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/document"
 )
 
 // register basic image drivers - gif, jpeg, png

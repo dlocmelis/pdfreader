@@ -5,8 +5,8 @@ import (
 
 	"fmt"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // A PdfPattern can represent a Pattern, either a tiling pattern or a shading pattern.

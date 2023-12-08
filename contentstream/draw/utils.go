@@ -1,7 +1,7 @@
 package draw
 
 import (
-	pdfcontent "github.com/moolekkari/unipdf/contentstream"
+	pdfcontent "github.com/dlocmelis/pdfreader/contentstream"
 )
 
 // DrawPathWithCreator makes the path with the content creator.

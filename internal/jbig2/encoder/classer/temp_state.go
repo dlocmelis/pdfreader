@@ -1,9 +1,9 @@
 package classer
 
 import (
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/bitmap"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/bitmap"
 )
 
 // similarTemplatesFinder stores the state of a state machine which fetches similar sized templates.

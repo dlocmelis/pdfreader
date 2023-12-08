@@ -7,12 +7,12 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 
-	"github.com/moolekkari/unipdf/internal/cmap"
-	"github.com/moolekkari/unipdf/internal/textencoding"
-	"github.com/moolekkari/unipdf/model/internal/fonts"
+	"github.com/dlocmelis/pdfreader/internal/cmap"
+	"github.com/dlocmelis/pdfreader/internal/textencoding"
+	"github.com/dlocmelis/pdfreader/model/internal/fonts"
 )
 
 // pdfFont is an internal interface for fonts that can be stored in PDF documents.
@@ -435,12 +435,12 @@ func (font *PdfFont) CharcodesToUnicodeWithStats(charcodes []textencoding.CharCo
 //
 // 9.10 Extraction of Text Content (page 292)
 // The process of finding glyph descriptions in OpenType fonts by a conforming reader shall be the following:
-// • For Type 1 fonts using “CFF” tables, the process shall be as described in 9.6.6.2, "Encodings
-//   for Type 1 Fonts".
-// • For TrueType fonts using “glyf” tables, the process shall be as described in 9.6.6.4,
-//   "Encodings for TrueType Fonts". Since this process sometimes produces ambiguous results,
-//   conforming writers, instead of using a simple font, shall use a Type 0 font with an Identity-H
-//   encoding and use the glyph indices as character codes, as described following Table 118.
+//   - For Type 1 fonts using “CFF” tables, the process shall be as described in 9.6.6.2, "Encodings
+//     for Type 1 Fonts".
+//   - For TrueType fonts using “glyf” tables, the process shall be as described in 9.6.6.4,
+//     "Encodings for TrueType Fonts". Since this process sometimes produces ambiguous results,
+//     conforming writers, instead of using a simple font, shall use a Type 0 font with an Identity-H
+//     encoding and use the glyph indices as character codes, as described following Table 118.
 func (font *PdfFont) CharcodeBytesToUnicode(data []byte) (string, int, int) {
 	runes, _, numMisses := font.CharcodesToUnicodeWithStats(font.BytesToCharcodes(data))
 
@@ -455,8 +455,8 @@ func (font *PdfFont) CharcodeBytesToUnicode(data []byte) (string, int, int) {
 
 // CharcodesToUnicode converts the character codes `charcodes` to a slice of runes.
 // How it works:
-//  1) Use the ToUnicode CMap if there is one.
-//  2) Use the underlying font's encoding.
+//  1. Use the ToUnicode CMap if there is one.
+//  2. Use the underlying font's encoding.
 func (font *PdfFont) CharcodesToUnicode(charcodes []textencoding.CharCode) []rune {
 	strlist, _, _ := font.CharcodesToUnicodeWithStats(charcodes)
 	return strlist
@@ -540,7 +540,8 @@ type CharMetrics = fonts.CharMetrics
 
 // GetRuneMetrics returns the char metrics for a rune.
 // TODO(peterwilliams97) There is nothing callers can do if no CharMetrics are found so we might as
-//                       well give them 0 width. There is no need for the bool return.
+//
+//	well give them 0 width. There is no need for the bool return.
 func (font *PdfFont) GetRuneMetrics(r rune) (CharMetrics, bool) {
 	t := font.actualFont()
 	if t == nil {
@@ -560,14 +561,17 @@ func (font *PdfFont) GetRuneMetrics(r rune) (CharMetrics, bool) {
 
 // GetCharMetrics returns the char metrics for character code `code`.
 // How it works:
-//  1) It calls the GetCharMetrics function for the underlying font, either a simple font or
+//  1. It calls the GetCharMetrics function for the underlying font, either a simple font or
 //     a Type0 font. The underlying font GetCharMetrics() functions do direct charcode ➞  metrics
 //     mappings.
-//  2) If the underlying font's GetCharMetrics() doesn't have a CharMetrics for `code` then a
+//  2. If the underlying font's GetCharMetrics() doesn't have a CharMetrics for `code` then a
 //     a CharMetrics with the FontDescriptor's /MissingWidth is returned.
-//  3) If there is no /MissingWidth then a failure is returned.
+//  3. If there is no /MissingWidth then a failure is returned.
+//
 // TODO(peterwilliams97) There is nothing callers can do if no CharMetrics are found so we might as
-//                       well give them 0 width. There is no need for the bool return.
+//
+//	well give them 0 width. There is no need for the bool return.
+//
 // TODO(gunnsth): Reconsider whether needed or if can map via GlyphName.
 func (font *PdfFont) GetCharMetrics(code textencoding.CharCode) (CharMetrics, bool) {
 	var nometrics fonts.CharMetrics

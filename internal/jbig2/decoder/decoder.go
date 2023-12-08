@@ -3,10 +3,10 @@ package decoder
 import (
 	"image"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/bitmap"
-	"github.com/moolekkari/unipdf/internal/jbig2/document"
-	"github.com/moolekkari/unipdf/internal/jbig2/errors"
-	"github.com/moolekkari/unipdf/internal/jbig2/reader"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/bitmap"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/document"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/errors"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/reader"
 )
 
 // Decoder is the structure used to decode JBIG2 encoded byte streams.

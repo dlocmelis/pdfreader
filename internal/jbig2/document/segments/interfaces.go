@@ -1,9 +1,9 @@
 package segments
 
 import (
-	"github.com/moolekkari/unipdf/internal/jbig2/bitmap"
-	"github.com/moolekkari/unipdf/internal/jbig2/reader"
-	"github.com/moolekkari/unipdf/internal/jbig2/writer"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/bitmap"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/reader"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/writer"
 )
 
 // Documenter is the interface used for the document model.

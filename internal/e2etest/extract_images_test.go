@@ -13,17 +13,18 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/extractor"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/extractor"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // Extract images test writes out a zip file containing all images extracted
 // from the subject PDF file and compares its hash with a known zip file hash.
 // Also checks memory usage.
 // Set environment variables:
-//		UNIDOC_E2E_FORCE_TESTS to "1" to force the tests to execute.
-//		UNIDOC_EXTRACT_IMAGES_TESTDATA to the path of the corpus folder.
+//
+//	UNIDOC_E2E_FORCE_TESTS to "1" to force the tests to execute.
+//	UNIDOC_EXTRACT_IMAGES_TESTDATA to the path of the corpus folder.
 var (
 	extractImagesCorpusFolder = os.Getenv("UNIDOC_EXTRACT_IMAGES_TESTDATA")
 )

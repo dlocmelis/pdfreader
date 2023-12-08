@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/decoder/arithmetic"
-	"github.com/moolekkari/unipdf/internal/jbig2/reader"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/decoder/arithmetic"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/reader"
 )
 
 // TestEncoder tests the encoder using the standard H.2 test sequence.

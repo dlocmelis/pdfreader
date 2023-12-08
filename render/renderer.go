@@ -5,13 +5,13 @@ import (
 
 	"github.com/adrg/sysfont"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/contentstream"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/model"
-	"github.com/moolekkari/unipdf/render/internal/context"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/contentstream"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/model"
+	"github.com/dlocmelis/pdfreader/render/internal/context"
 
-	"github.com/moolekkari/unipdf/internal/transform"
+	"github.com/dlocmelis/pdfreader/internal/transform"
 )
 
 var (

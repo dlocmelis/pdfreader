@@ -1,7 +1,7 @@
 package context
 
 import (
-	"github.com/moolekkari/unipdf/internal/transform"
+	"github.com/dlocmelis/pdfreader/internal/transform"
 )
 
 // TextState holds a representation of a PDF text state. The text state
@@ -123,7 +123,7 @@ func (ts *TextState) ProcQ(data []byte, ctx Context) {
 	ts.ProcTj(data, ctx)
 }
 
-// ProcDQ processes a `''` operation, which advances the text state to a new
+// ProcDQ processes a `”` operation, which advances the text state to a new
 // line and then displays a text string using aw and ac as word and character
 // spacing.
 //

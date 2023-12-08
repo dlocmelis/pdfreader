@@ -3,7 +3,7 @@ package model
 import (
 	"testing"
 
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // Test for an endless recursive loop in

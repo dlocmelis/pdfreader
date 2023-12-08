@@ -6,7 +6,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 func init() {
@@ -104,7 +104,7 @@ func TestAdd2(t *testing.T) {
 	}
 }
 
-//// 8.3 6.6 sub -> 1.7 (real)
+// // 8.3 6.6 sub -> 1.7 (real)
 // 8 6.3 sub -> 1.7 (real)
 // 8 6 sub -> 2 (int)
 func TestSub1(t *testing.T) {

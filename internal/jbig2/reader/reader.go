@@ -5,7 +5,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 // Reader is the bit reader implementation.

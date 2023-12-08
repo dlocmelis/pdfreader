@@ -3,7 +3,7 @@
 package ps
 
 import (
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 // PSExecutor has its own execution stack and is used to executre a PS routine (program).

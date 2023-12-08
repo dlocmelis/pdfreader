@@ -7,8 +7,8 @@ import (
 	gocolor "image/color"
 	"image/jpeg"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // Creates the encoder for the inline image's Filter and DecodeParms.

@@ -7,12 +7,12 @@ import (
 	"math"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/basic"
-	"github.com/moolekkari/unipdf/internal/jbig2/errors"
-	"github.com/moolekkari/unipdf/internal/jbig2/reader"
-	"github.com/moolekkari/unipdf/internal/jbig2/writer"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/basic"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/errors"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/reader"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/writer"
 )
 
 // Header is the segment header used to define the segment parameters - see 7.2.

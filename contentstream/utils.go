@@ -3,9 +3,9 @@ package contentstream
 import (
 	"errors"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 func makeParamsFromFloats(vals []float64) []core.PdfObject {

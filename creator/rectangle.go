@@ -1,8 +1,8 @@
 package creator
 
 import (
-	"github.com/moolekkari/unipdf/contentstream/draw"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/contentstream/draw"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // Rectangle defines a rectangle with upper left corner at (x,y) and a specified width and height.  The rectangle

@@ -3,7 +3,7 @@ package security
 import (
 	"testing"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 func init() {

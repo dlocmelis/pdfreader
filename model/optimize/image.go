@@ -1,9 +1,9 @@
 package optimize
 
 import (
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // Image optimizes images by rewrite images into JPEG format with quality equals to ImageQuality.

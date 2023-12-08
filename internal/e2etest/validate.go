@@ -8,12 +8,13 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 // To enable ghostscript validation, the path to the binary needs to be specified.
 // Set environment variable:
-//		UNIDOC_GS_BIN_PATH to the path of the ghostscript binary (gs).
+//
+//	UNIDOC_GS_BIN_PATH to the path of the ghostscript binary (gs).
 var (
 	ghostscriptBinPath = os.Getenv("UNIDOC_GS_BIN_PATH")
 )

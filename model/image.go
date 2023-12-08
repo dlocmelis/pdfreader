@@ -12,11 +12,11 @@ import (
 	_ "image/png"
 	"io"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/internal/imageutil"
-	"github.com/moolekkari/unipdf/internal/jbig2/bitmap"
-	"github.com/moolekkari/unipdf/internal/sampling"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/internal/imageutil"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/bitmap"
+	"github.com/dlocmelis/pdfreader/internal/sampling"
 )
 
 // Image interface is a basic representation of an image used in PDF.
@@ -293,14 +293,15 @@ func (img *Image) ColorAt(x, y int) (gocolor.Color, error) {
 // value.  Sets the image's BitsPerComponent to the target value following resampling.
 //
 // For example, converting an 8-bit RGB image to 1-bit grayscale (common for scanned images):
-//   // Convert RGB image to grayscale.
-//   rgbColorSpace := pdf.NewPdfColorspaceDeviceRGB()
-//   grayImage, err := rgbColorSpace.ImageToGray(rgbImage)
-//   if err != nil {
-//     return err
-//   }
-//   // Resample as 1 bit.
-//   grayImage.Resample(1)
+//
+//	// Convert RGB image to grayscale.
+//	rgbColorSpace := pdf.NewPdfColorspaceDeviceRGB()
+//	grayImage, err := rgbColorSpace.ImageToGray(rgbImage)
+//	if err != nil {
+//	  return err
+//	}
+//	// Resample as 1 bit.
+//	grayImage.Resample(1)
 func (img *Image) Resample(targetBitsPerComponent int64) {
 	samples := img.GetSamples()
 

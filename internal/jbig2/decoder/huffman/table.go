@@ -3,7 +3,7 @@ package huffman
 import (
 	"fmt"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/reader"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/reader"
 )
 
 // Tabler is the interface for all types of the huffman tables.

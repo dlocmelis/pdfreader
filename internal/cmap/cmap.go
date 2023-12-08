@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/internal/cmap/bcmaps"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/internal/cmap/bcmaps"
 )
 
 const (
@@ -81,8 +81,9 @@ func (info *CIDSystemInfo) String() string {
 
 // CMap represents a character code to unicode mapping used in PDF files.
 // References:
-//  https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/5411.ToUnicode.pdf
-//  https://github.com/adobe-type-tools/cmap-resources/releases
+//
+//	https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/5411.ToUnicode.pdf
+//	https://github.com/adobe-type-tools/cmap-resources/releases
 type CMap struct {
 	*cMapParser
 
@@ -327,10 +328,13 @@ func (cmap *CMap) CIDToCharcode(cid CharCode) (CharCode, bool) {
 // BytesToCharcodes attempts to convert the entire byte array `data` to a list
 // of character codes from the ranges specified by `cmap`'s codespaces.
 // Returns:
-//      character code sequence (if there is a match complete match)
-//      matched?
+//
+//	character code sequence (if there is a match complete match)
+//	matched?
+//
 // NOTE: A partial list of character codes will be returned if a complete match
-//       is not possible.
+//
+//	is not possible.
 func (cmap *CMap) BytesToCharcodes(data []byte) ([]CharCode, bool) {
 	var charcodes []CharCode
 	if cmap.nbits == 8 {
@@ -399,9 +403,10 @@ func (cmap *CMap) Bytes() []byte {
 
 // matchCode attempts to match the byte array `data` with a character code in `cmap`'s codespaces.
 // Returns:
-//      character code (if there is a match) of
-//      number of bytes read (if there is a match)
-//      matched?
+//
+//	character code (if there is a match) of
+//	number of bytes read (if there is a match)
+//	matched?
 func (cmap *CMap) matchCode(data []byte) (code CharCode, n int, matched bool) {
 	for j := 0; j < maxCodeLen; j++ {
 		if j < len(data) {

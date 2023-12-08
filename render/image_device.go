@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/moolekkari/unipdf/model"
-	"github.com/moolekkari/unipdf/render/internal/context/imagerender"
+	"github.com/dlocmelis/pdfreader/model"
+	"github.com/dlocmelis/pdfreader/render/internal/context/imagerender"
 )
 
 // ImageDevice is used to render PDF pages to image targets.

@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/internal/transform"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/internal/transform"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // GraphicsState is a basic graphics state implementation for PDF processing.

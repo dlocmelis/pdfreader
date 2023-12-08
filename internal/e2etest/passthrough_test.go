@@ -7,15 +7,16 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // Passthrough benchmark loads a PDF, writes back out and performs a sanity check on the output with ghostscript.
 // Set environment variables:
-//		UNIDOC_E2E_FORCE_TESTS to "1" to force the tests to execute.
-//		UNIDOC_PASSTHROUGH_TESTDATA to the path of the corpus folder.
-//		UNIDOC_GS_BIN_PATH to the path of the ghostscript binary (gs).
+//
+//	UNIDOC_E2E_FORCE_TESTS to "1" to force the tests to execute.
+//	UNIDOC_PASSTHROUGH_TESTDATA to the path of the corpus folder.
+//	UNIDOC_GS_BIN_PATH to the path of the ghostscript binary (gs).
 var (
 	forceTest               = os.Getenv("UNIDOC_E2E_FORCE_TESTS") == "1"
 	passthroughCorpusFolder = os.Getenv("UNIDOC_PASSTHROUGH_TESTDATA")

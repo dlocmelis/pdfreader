@@ -8,13 +8,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/model"
 
-	"github.com/moolekkari/unipdf/internal/testutils"
-	"github.com/moolekkari/unipdf/internal/textencoding"
-	"github.com/moolekkari/unipdf/model/internal/fonts"
+	"github.com/dlocmelis/pdfreader/internal/testutils"
+	"github.com/dlocmelis/pdfreader/internal/textencoding"
+	"github.com/dlocmelis/pdfreader/model/internal/fonts"
 )
 
 func init() {

@@ -3,14 +3,16 @@ package creator
 import (
 	"strings"
 
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // TOCLine represents a line in a table of contents.
 // The component can be used both in the context of a
 // table of contents component and as a standalone component.
 // The representation of a table of contents line is as follows:
-//       [number] [title]      [separator] [page]
+//
+//	[number] [title]      [separator] [page]
+//
 // e.g.: Chapter1 Introduction ........... 1
 type TOCLine struct {
 	// The underlyng styled paragraph used to render the TOC line.

@@ -12,12 +12,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/moolekkari/unipdf/annotator"
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/core/security"
-	"github.com/moolekkari/unipdf/model"
-	"github.com/moolekkari/unipdf/model/sighandler"
+	"github.com/dlocmelis/pdfreader/annotator"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/core/security"
+	"github.com/dlocmelis/pdfreader/model"
+	"github.com/dlocmelis/pdfreader/model/sighandler"
 )
 
 // Creator is a wrapper around functionality for creating PDF reports and/or adding new
@@ -229,7 +229,6 @@ func (c *Creator) getActivePage() *model.PdfPage {
 // Examples:
 // 1. 10x15 sq. mm: SetPageSize(PageSize{10*creator.PPMM, 15*creator.PPMM}) where PPMM is points per mm.
 // 2. 3x2 sq. inches: SetPageSize(PageSize{3*creator.PPI, 2*creator.PPI}) where PPI is points per inch.
-//
 func (c *Creator) SetPageSize(size PageSize) {
 	c.pagesize = size
 
@@ -682,13 +681,12 @@ func (c *Creator) Write(ws io.Writer) error {
 // Example of encrypting with a user/owner password "password"
 // Prior to calling c.WriteFile():
 //
-// c.SetPdfWriterAccessFunc(func(w *model.PdfWriter) error {
-//	userPass := []byte("password")
-//	ownerPass := []byte("password")
-//	err := w.Encrypt(userPass, ownerPass, nil)
-//	return err
-// })
-//
+//	c.SetPdfWriterAccessFunc(func(w *model.PdfWriter) error {
+//		userPass := []byte("password")
+//		ownerPass := []byte("password")
+//		err := w.Encrypt(userPass, ownerPass, nil)
+//		return err
+//	})
 func (c *Creator) SetPdfWriterAccessFunc(pdfWriterAccessFunc func(writer *model.PdfWriter) error) {
 	c.pdfWriterAccessFunc = pdfWriterAccessFunc
 }

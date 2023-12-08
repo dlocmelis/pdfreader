@@ -5,8 +5,8 @@ package core
 import (
 	"testing"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core/security"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core/security"
 )
 
 func init() {

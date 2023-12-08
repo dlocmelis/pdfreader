@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 var _ core.PdfObject = &pdfSignDictionary{}

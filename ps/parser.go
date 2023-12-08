@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/moolekkari/unipdf/common"
-	pdfcore "github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	pdfcore "github.com/dlocmelis/pdfreader/core"
 )
 
 // PSParser is a basic Postscript parser.

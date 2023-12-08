@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // PdfRectangle is a definition of a rectangle.

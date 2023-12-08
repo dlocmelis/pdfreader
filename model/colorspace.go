@@ -6,8 +6,8 @@ import (
 	"image/color"
 	"math"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // PdfColorspace interface defines the common methods of a PDF colorspace.
@@ -2396,7 +2396,7 @@ func (cs *PdfColorspaceSpecialIndexed) ImageToRGB(img Image) (Image, error) {
 	baseImage.Width = img.Width
 	baseImage.alphaData = img.alphaData
 	// TODO(peterwilliams97): Add support for other BitsPerComponent values.
-	// See https://github.com/moolekkari/unipdf/issues/260
+	// See https://github.com/dlocmelis/pdfreader/issues/260
 	baseImage.BitsPerComponent = 8
 	baseImage.hasAlpha = img.hasAlpha
 	baseImage.ColorComponents = cs.Base.GetNumComponents()
@@ -2672,7 +2672,8 @@ func (cs *PdfColorspaceSpecialSeparation) ImageToRGB(img Image) (Image, error) {
 // spaces, except they can contain an arbitrary number of color components.
 //
 // Format: [/DeviceN names alternateSpace tintTransform]
-//     or: [/DeviceN names alternateSpace tintTransform attributes]
+//
+//	or: [/DeviceN names alternateSpace tintTransform attributes]
 type PdfColorspaceDeviceN struct {
 	ColorantNames  *core.PdfObjectArray
 	AlternateSpace PdfColorspace
@@ -2780,7 +2781,8 @@ func newPdfColorspaceDeviceNFromPdfObject(obj core.PdfObject) (*PdfColorspaceDev
 
 // ToPdfObject returns a *PdfIndirectObject containing a *PdfObjectArray representation of the DeviceN colorspace.
 // Format: [/DeviceN names alternateSpace tintTransform]
-//     or: [/DeviceN names alternateSpace tintTransform attributes]
+//
+//	or: [/DeviceN names alternateSpace tintTransform attributes]
 func (cs *PdfColorspaceDeviceN) ToPdfObject() core.PdfObject {
 	csArray := core.MakeArray(core.MakeName("DeviceN"))
 	csArray.Append(cs.ColorantNames)

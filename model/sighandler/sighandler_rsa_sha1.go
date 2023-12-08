@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"hash"
 
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // SignFunc represents a custom signing function. The function should return

@@ -9,8 +9,8 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // ContentStreamParser represents a content stream parser for parsing content streams in PDFs.

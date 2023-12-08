@@ -3,8 +3,8 @@ package creator
 import (
 	"os"
 
-	"github.com/moolekkari/unipdf/contentstream/draw"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/contentstream/draw"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // Loads the template from path as a list of pages.

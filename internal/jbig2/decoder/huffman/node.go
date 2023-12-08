@@ -6,7 +6,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/reader"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/reader"
 )
 
 // Node is the interface defined for all huffman tree nodes.

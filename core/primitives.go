@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/internal/strutils"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/internal/strutils"
 )
 
 // PdfObject is an interface which all primitive PDF objects must implement.

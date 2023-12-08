@@ -3,9 +3,9 @@ package contentstream
 import (
 	"math"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/model"
 )
 
 // ContentCreator is a builder for PDF content streams.
@@ -820,7 +820,7 @@ func (cc *ContentCreator) Add_quote(textstr core.PdfObjectString) *ContentCreato
 	return cc
 }
 
-// Add_quotes appends "''" operand to the content stream:
+// Add_quotes appends "”" operand to the content stream:
 // Move to next line and show a string, using `aw` and `ac` as word
 // and character spacing respectively.
 //

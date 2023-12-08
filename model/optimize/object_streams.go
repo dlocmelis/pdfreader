@@ -1,7 +1,7 @@
 package optimize
 
 import (
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // ObjectStreams groups PDF objects to object streams.

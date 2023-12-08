@@ -3,7 +3,7 @@ package imagerender
 import (
 	"math"
 
-	"github.com/moolekkari/unipdf/internal/transform"
+	"github.com/dlocmelis/pdfreader/internal/transform"
 )
 
 func quadratic(x0, y0, x1, y1, x2, y2, t float64) (x, y float64) {

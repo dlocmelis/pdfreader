@@ -4,8 +4,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // ParseIndObjSeries loads a series of indirect objects until it runs into an error or EOF.

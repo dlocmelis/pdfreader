@@ -3,7 +3,7 @@ package creator
 import (
 	"errors"
 
-	"github.com/moolekkari/unipdf/common"
+	"github.com/dlocmelis/pdfreader/common"
 )
 
 // Division is a container component which can wrap across multiple pages (unlike Block).

@@ -3,8 +3,8 @@ package jbig2
 import (
 	"sort"
 
-	"github.com/moolekkari/unipdf/internal/jbig2/document"
-	"github.com/moolekkari/unipdf/internal/jbig2/document/segments"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/document"
+	"github.com/dlocmelis/pdfreader/internal/jbig2/document/segments"
 )
 
 // Globals is the v3 mapping of the jbig2 segments to header mapping.

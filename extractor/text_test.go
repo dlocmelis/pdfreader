@@ -15,10 +15,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/creator"
-	"github.com/moolekkari/unipdf/internal/transform"
-	"github.com/moolekkari/unipdf/model"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/creator"
+	"github.com/dlocmelis/pdfreader/internal/transform"
+	"github.com/dlocmelis/pdfreader/model"
 	"golang.org/x/text/unicode/norm"
 )
 
@@ -176,7 +176,7 @@ func TestTermMarksFiles(t *testing.T) {
 	testTermMarksFiles(t)
 }
 
-//  TestTextSort checks that PageText.sortPosition() gives expected results
+// TestTextSort checks that PageText.sortPosition() gives expected results
 func TestTextSort(t *testing.T) {
 	// marks0 is in the expected sort order for tol=15
 	marks0 := []textMark{
@@ -775,7 +775,7 @@ func testTermMarks(t *testing.T, text string, textMarks *TextMarkArray, n int) {
 	}
 }
 
-// runeStringIndex returns a map of indexes of `[]rune(text)`` to the corresponding indexes in `text`.
+// runeStringIndex returns a map of indexes of `[]rune(text)“ to the corresponding indexes in `text`.
 func runeStringIndex(text string) map[int]int {
 	runeString := map[int]int{}
 	runeIdx := 0
@@ -791,8 +791,9 @@ func runeStringIndex(text string) map[int]int {
 
 // checkContains checks that `offsetMark` contains `expectedMark`.
 // Contains means: `expectedMark`.Offset is in `offsetMark` and for this element (call it tm)
-//   tm.Text == expectedMark.Text and the bounding boxes of
-//   tm and expectedMark are within `tol` of each other.
+//
+//	tm.Text == expectedMark.Text and the bounding boxes of
+//	tm and expectedMark are within `tol` of each other.
 func checkContains(t *testing.T, desc string, offsetMark map[int]TextMark, expectedMark TextMark) {
 	tm, ok := offsetMark[expectedMark.Offset]
 	if !ok {

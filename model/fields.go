@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/moolekkari/unipdf/common"
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/common"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // FieldFlag represents form field flags. Some of the flags can apply to all types of fields whereas other

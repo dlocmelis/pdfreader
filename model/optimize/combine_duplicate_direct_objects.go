@@ -3,7 +3,7 @@ package optimize
 import (
 	"crypto/md5"
 
-	"github.com/moolekkari/unipdf/core"
+	"github.com/dlocmelis/pdfreader/core"
 )
 
 // CombineDuplicateDirectObjects combines duplicated direct objects by its data hash.

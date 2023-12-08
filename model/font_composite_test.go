@@ -4,8 +4,8 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/moolekkari/unipdf/core"
-	"github.com/moolekkari/unipdf/model/internal/fonts"
+	"github.com/dlocmelis/pdfreader/core"
+	"github.com/dlocmelis/pdfreader/model/internal/fonts"
 )
 
 func TestCIDWidthArr(t *testing.T) {
