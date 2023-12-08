@@ -5,7 +5,6 @@ require (
 	github.com/adrg/sysfont v0.1.2
 	github.com/adrg/xdg v0.4.0 // indirect
 	github.com/boombuler/barcode v1.0.1
-	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/ericchiang/css v1.3.0
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
 	github.com/gorilla/css v1.0.1 // indirect
